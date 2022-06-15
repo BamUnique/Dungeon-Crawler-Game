@@ -1,0 +1,40 @@
+{
+  "classes": [
+    {
+      "name": "Berserker",
+      "abilities": {
+        "normal": "Slash",
+        "special": "Stab",
+        "evade": "Roll",
+        "regen": "Bloodlust"
+      }
+    },
+    {
+      "name": "Archer",
+      "abilities": {
+        "normal": "Quick Draw",
+        "special": "Charged Shot",
+        "evade": "Side Step",
+        "regen": "Nature's Blessing"
+      }
+    },
+    {
+      "name": "Mage",
+      "abilities": {
+        "normal": "Fireball",
+        "special": "Lightning Bolt",
+        "evade": "Mirage",
+        "regen": "Heal"
+      }
+    },
+    {
+      "name": "Tank",
+      "abilities": {
+        "normal": "Shield Bash",
+        "special": "Pound",
+        "evade": "Taunt",
+        "regen": "Revitalise"
+      }
+    }
+  ]
+}

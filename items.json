@@ -1,0 +1,935 @@
+{
+    "weapons": [
+      {
+        "name": "Long Sword",
+        "type": "weapon",
+        "rarity": 0,
+        "buffs": {
+          "strength": 15
+        }
+      },
+      {
+        "name": "Butcher Knife",
+        "type": "weapon",
+        "rarity": 0,
+        "buffs": {
+          "strength": 5,
+          "agility": 10
+        }
+      },
+      {
+        "name": "Scimitar",
+        "type": "weapon",
+        "rarity": 0,
+        "buffs": {
+          "strength": 10,
+          "agility": 5
+        }
+      },
+      {
+        "name": "Large Sword",
+        "type": "weapon",
+        "rarity": 0,
+        "buffs": {
+          "strength": 20,
+          "agility": -5
+        }
+      },
+      {
+        "name": "Broad Axe",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "strength": 30
+        }
+      },
+      {
+        "name": "Spear",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "strength": 30
+        }
+      },
+      {
+        "name": "Daggers",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "strength": 20,
+          "agility": 10
+        }
+      },
+      {
+        "name": "Great Axe",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "strength": 40,
+          "agility": -10
+        }
+      },
+      {
+        "name": "Dual Scimitar",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "strength": 50,
+          "agility": 20
+        }
+      },
+      {
+        "name": "Great Sword",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "strength": 70,
+          "agility": -10
+        }
+      },
+      {
+        "name": "Dual Long Sword",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "strength": 60
+        }
+      },
+      {
+        "name": "Dual Axe",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "strength": 60
+        }
+      },
+      {
+        "name": "Flame Sword",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "strength": 100,
+          "agility": 50
+        }
+      },
+      {
+        "name": "Moon Sword",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "strength": 100,
+          "defence": 50
+        }
+      },
+      {
+        "name": "Katana",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "strength": 90,
+          "agility": 60
+        }
+      },
+      {
+        "name": "Spike Chain",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "strength": 150,
+          "agility": -20
+        }
+      },
+      {
+        "name": "Vengeance",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "strength": 250,
+          "agility": 100,
+          "armour": 100
+        }
+      },
+      {
+        "name": "Light Bringer",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "strength": 250,
+          "agility": 200
+        }
+      },
+      {
+        "name": "Void Katana",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "strength": 300,
+          "agility": 100
+        }
+      },
+      {
+        "name": "Bane of Light",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "strength": 500
+        }
+      },
+      {
+        "name": "Short Bow",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "strength": 15
+        }
+      },
+      {
+        "name": "Sling Shot",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "strength": 10,
+          "agility": 5
+        }
+      },
+      {
+        "name": "Light Crossbow",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "strength": 20
+        }
+      },
+      {
+        "name": "Blowdart",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "strength": 5,
+          "agility": 10
+        }
+      },
+      {
+        "name": "Long Bow",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "strength": 25,
+          "agility": 10
+        }
+      },
+      {
+        "name": "Crossbow",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "strength": 40
+        }
+      },
+      {
+        "name": "Throwing Knives",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "strength": 20,
+          "agility": 20
+        }
+      },
+      {
+        "name": "Double Blowdart",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "strength": 15,
+          "agility": 30
+        }
+      },
+      {
+        "name": "Double Bow",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "strength": 50,
+          "agility": 5
+        }
+      },
+      {
+        "name": "Dual Crossbow",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "strength": 75
+        }
+      },
+      {
+        "name": "Shuriken",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "strength": 40,
+          "agility": 60
+        }
+      },
+      {
+        "name": "Force Bow",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "strength": 100,
+          "agility": -32
+        }
+      },
+      {
+        "name": "Flame Bow",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "strength": 100,
+          "agility": 50
+        }
+      },
+      {
+        "name": "Hurricane",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "strength": 150
+        }
+      },
+      {
+        "name": "Burst Rile",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "strength": 90,
+          "agility": 100
+        }
+      },
+      {
+        "name": "Moonsong",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "strength": 120,
+          "agility": 20,
+          "defence": 50
+        }
+      },
+      {
+        "name": "Million Arrows",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "strength": 250,
+          "agility": 150
+        }
+      },
+      {
+        "name": "Saving Grace",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "strength": 250,
+          "defence": 150
+        }
+      },
+      {
+        "name": "Shadow Step",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "strength": 200,
+          "agility": 300
+        }
+      },
+      {
+        "name": "The Cannon",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "strength": 500
+        }
+      },
+      {
+        "name": "Wand",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "wisdom": 15
+        }
+      },
+      {
+        "name": "Magic Book",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "wisdom": 20
+        }
+      },
+      {
+        "name": "Wooden Staff",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "wisdom": 15
+        }
+      },
+      {
+        "name": "Magic Bag",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "wisdom": 10,
+          "agility": 10
+        }
+      },
+      {
+        "name": "Refined Wand",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "wisdom": 30
+        }
+      },
+      {
+        "name": "Book of Intermediate Magic",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "wisdom": 40
+        }
+      },
+      {
+        "name": "Refined Staff",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "wisdom": 30
+        }
+      },
+      {
+        "name": "Great Magic Bag",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "wisdom": 20,
+          "agility": 20
+        }
+      },
+      {
+        "name": "Luxury Wand",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "wisdom": 60
+        }
+      },
+      {
+        "name": "Book of Advanced Magic",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "wisdom": 80
+        }
+      },
+      {
+        "name": "Luxury Staff",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "wisdom": 60
+        }
+      },
+      {
+        "name": "Magic Sack",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "wisdom": 50,
+          "agility": 50
+        }
+      },
+      {
+        "name": "Crystal Wand",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "wisdom": 120
+        }
+      },
+      {
+        "name": "Book of Greater Magic",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "wisdom": 160
+        }
+      },
+      {
+        "name": "Crystal Staff",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "wisdom": 120
+        }
+      },
+      {
+        "name": "Sack of Kings",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "wisdom": 100,
+          "agility": 100
+        }
+      },
+      {
+        "name": "Wand of Gods",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "wisdom": 300,
+          "defence": 100
+        }
+      },
+      {
+        "name": "Akashic Tomb",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "wisdom": 700,
+          "agility": 100
+        }
+      },
+      {
+        "name": "Staff of the Heavens",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "wisdom": 300,
+          "hp": 150
+        }
+      },
+      {
+        "name": "Null Sack",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "wisdom": 300,
+          "agility": 300
+        }
+      },
+      {
+        "name": "Round Shield",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "defence": 10,
+          "hp": 30
+        }
+      },
+      {
+        "name": "Curved Shield",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "defence": 30
+        }
+      },
+      {
+        "name": "Shield",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "defence": 15,
+          "hp": 10
+        }
+      },
+      {
+        "name": "Arm Shield",
+        "type": "weapon",
+        "rarity": 1,
+        "buffs": {
+          "defence": 10,
+          "hp": 30
+        }
+      },
+      {
+        "name": "Reinforced Shield",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "defence": 50
+        }
+      },
+      {
+        "name": "Fine Shield",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "defence": 30,
+          "hp": 50
+        }
+      },
+      {
+        "name": "Large Shield",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "defence": 70,
+          "agility": -10
+        }
+      },
+      {
+        "name": "Body Shield",
+        "type": "weapon",
+        "rarity": 2,
+        "buffs": {
+          "defence": 40,
+          "hp": 70
+        }
+      },
+      {
+        "name": "Plated Shield",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "defence": 100
+        }
+      },
+      {
+        "name": "Cushioned Shield",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "defence": 100
+        }
+      },
+      {
+        "name": "Broad Shield",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "defence": 100
+        }
+      },
+      {
+        "name": "Thick Shield",
+        "type": "weapon",
+        "rarity": 3,
+        "buffs": {
+          "defence": 100
+        }
+      },
+      {
+        "name": "Custom Shield",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "defence": 300,
+          "hp": 200
+        }
+      },
+      {
+        "name": "Shield Cloak",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "defence": 250,
+          "hp": 250,
+          "agility": 200
+        }
+      },
+      {
+        "name": "Luxury Shield",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "defence": 200,
+          "hp": 500
+        }
+      },
+      {
+        "name": "Paladium Shield",
+        "type": "weapon",
+        "rarity": 4,
+        "buffs": {
+          "defence": 450
+        }
+      },
+      {
+        "name": "Shield of the Gods",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "defence": 600,
+          "hp": 1000
+        }
+      },
+      {
+        "name": "Wall of Shields",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "defence": 800,
+          "agility": 200
+        }
+      },
+      {
+        "name": "Perfect Defence",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "defence": 1500
+        }
+      },
+      {
+        "name": "Shield of the Usurper",
+        "type": "weapon",
+        "rarity": 5,
+        "buffs": {
+          "defence": 500,
+          "hp": 500,
+          "wisdom": 50,
+          "agility": 200
+        }
+      }
+    ],
+
+    "armour": [
+      {
+        "name": "Leather Armour",
+        "type": "armour",
+        "rarity": 0,
+        "buffs": {
+          "defence": 10
+        }
+      },
+      {
+        "name": "Ranger Armour",
+        "type": "armour",
+        "rarity": 1,
+        "buffs": {
+          "defence": 20,
+          "agility": 20
+        }
+      },
+      {
+        "name": "Chainmail",
+        "type": "armour",
+        "rarity": 1,
+        "buffs": {
+          "defence": 45,
+          "hp": 25
+        }
+      },
+      {
+        "name": "Mage Robes",
+        "type": "armour",
+        "rarity": 1,
+        "buffs": {
+          "hp": 50,
+          "wisdom": 40
+        }
+      },
+      {
+        "name": "Chain Armour",
+        "type": "armour",
+        "rarity": 2,
+        "buffs": {
+          "defence": 45,
+          "agility": 25
+        }
+      },
+      {
+        "name": "Light Armour",
+        "type": "armour",
+        "rarity": 2,
+        "buffs": {
+          "defence": 40,
+          "agility": 40
+        }
+      },
+      {
+        "name": "Plated Armour",
+        "type": "armour",
+        "rarity": 2,
+        "buffs": {
+          "defence": 60,
+          "hp": 100
+        }
+      },
+      {
+        "name": "Mage Cloak",
+        "type": "armour",
+        "rarity": 2,
+        "buffs": {
+          "hp": 100,
+          "wisdom": 80
+        }
+      },
+      {
+        "name": "Legionnaire Armour",
+        "type": "armour",
+        "rarity": 3,
+        "buffs": {
+          "defence": 60,
+          "agility": 30
+        }
+      },
+      {
+        "name": "Scouts Armour",
+        "type": "armour",
+        "rarity": 3,
+        "buffs": {
+          "defence": 50,
+          "agility": 50
+        }
+      },
+      {
+        "name": "Wizard Cloak",
+        "type": "armour",
+        "rarity": 3,
+        "buffs": {
+          "hp": 150,
+          "wisdom": 120
+        }
+      },
+      {
+        "name": "Duranium Armour",
+        "type": "armour",
+        "rarity": 3,
+        "buffs": {
+          "hp": 200,
+          "defence": 100
+        }
+      },
+      {
+        "name": "King's Armour",
+        "type": "armour",
+        "rarity": 4,
+        "buffs": {
+          "defence": 100,
+          "agility": 100
+        }
+      },
+      {
+        "name": "Assassin's Armour",
+        "type": "armour",
+        "rarity": 4,
+        "buffs": {
+          "defence": 80,
+          "agility": 150
+        }
+      },
+      {
+        "name": "Great Wizards Cloak",
+        "type": "armour",
+        "rarity": 4,
+        "buffs": {
+          "hp": 250,
+          "wisdom": 200
+        }
+      },
+      {
+        "name": "Paladium Armour",
+        "type": "armour",
+        "rarity": 4,
+        "buffs": {
+          "hp": 250,
+          "defence": 250
+        }
+      },
+      {
+        "name": "Emperor Armour",
+        "type": "armour",
+        "rarity": 5,
+        "buffs": {
+          "defence": 500,
+          "strength": 250
+        }
+      },
+      {
+        "name": "Blink Armour",
+        "type": "armour",
+        "rarity": 5,
+        "buffs": {
+          "defence": 300,
+          "agility": 700
+        }
+      },
+      {
+        "name": "Nimbus Cloak",
+        "type": "armour",
+        "rarity": 5,
+        "buffs": {
+          "hp": 500,
+          "wisdom": 600
+        }
+      },
+      {
+        "name": "Protector of Gods",
+        "type": "armour",
+        "rarity": 5,
+        "buffs": {
+          "hp": 900,
+          "defence": 1000
+        }
+      }
+    ],
+
+    "spells": [
+      {
+        "name": "Fireball",
+        "type": "spells",
+        "rarity": 0,
+        "buffs": {
+          "wisdom": 50
+        }
+      },
+      {
+        "name": "Smite",
+        "type": "spells",
+        "rarity": 1,
+        "buffs": {
+          "wisdom": 75
+        }
+      },
+      {
+        "name": "Nimbus Cloak",
+        "type": "spells",
+        "rarity": 2,
+        "buffs": {
+          "hp": 500,
+          "wisdom": 600
+        }
+      },
+      {
+        "name": "Nimbus Cloak",
+        "type": "spells",
+        "rarity": 3,
+        "buffs": {
+          "hp": 500,
+          "wisdom": 600
+        }
+      },
+      {
+        "name": "Nimbus Cloak",
+        "type": "spells",
+        "rarity": 4,
+        "buffs": {
+          "hp": 500,
+          "wisdom": 600
+        }
+      },
+      {
+        "name": "Nimbus Cloak",
+        "type": "armour",
+        "rarity": 5,
+        "buffs": {
+          "hp": 500,
+          "wisdom": 600
+        }
+      }
+    ]
+
+  }

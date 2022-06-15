@@ -1,0 +1,64 @@
+{
+  "monsters": [
+    {
+      "name": "Goblin",
+      "stats": {
+        "hp": 20,
+        "defence": 5,
+        "strength": 5,
+        "wisdom": 0,
+        "agility": 5
+      }
+    },
+    {
+      "name": "Orc",
+      "stats": {
+        "hp": 100,
+        "defence": 10,
+        "strength": 10,
+        "wisdom": 10,
+        "agility": 10
+      }
+    },
+    {
+      "name": "Giant",
+      "stats": {
+        "hp": 1000,
+        "defence": 30,
+        "strength": 25,
+        "wisdom": 25,
+        "agility": 15
+      }
+    },
+    {
+      "name": "Dragon Fletchling",
+      "stats": {
+        "hp": 10000,
+        "defence": 100,
+        "strength": 100,
+        "wisdom": 250,
+        "agility": 250
+      }
+    },
+    {
+      "name": "Dragon",
+      "stats": {
+        "hp": 50000,
+        "defence": 500,
+        "strength": 1000,
+        "wisdom": 500,
+        "agility": 1000
+      }
+    },
+    {
+      "name": "Sun Titan",
+      "stats": {
+        "hp": 500000,
+        "defence": 1000,
+        "strength": 10000,
+        "wisdom": 2000,
+        "agility": 10000
+      }
+    }
+  ]
+}

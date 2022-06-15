@@ -1,0 +1,64 @@
+{
+    "classes": [
+        {
+            "name": "Berserker",
+            "skills": {
+                "hp": 150,
+                "defence": 50,
+                "strength": 50,
+                "wisdom": 10,
+                "agility": 25
+            },
+            "kit": {
+                "weapon": "Long Sword",
+                "armour": "Leather Armour",
+                "spellbook": null
+            }
+        },
+        {
+            "name": "Archer",
+            "skills": {
+                "hp": 100,
+                "defence": 50,
+                "strength": 40,
+                "wisdom": 10,
+                "agility": 40
+            },
+            "kit": {
+                "weapon": "Short Bow",
+                "armour": "Ranger Armour",
+                "spellbook": null
+            }
+        },
+        {
+            "name": "Mage",
+            "skills": {
+                "hp": 100,
+                "defence": 30,
+                "strength": 10,
+                "wisdom": 80,
+                "agility": 25
+            },
+            "kit": {
+                "weapon": "Wand",
+                "armour": "Mage Robes",
+                "spellbook": true
+            }
+        },
+        {
+            "name": "Tank",
+            "skills": {
+                "hp": 300,
+                "defence": 100,
+                "strength": 10,
+                "wisdom": 10,
+                "agility": 15
+            },
+            "kit": {
+                "weapon": "Round Shield",
+                "armour": "Chainmail",
+                "spellbook": null
+            }
+        }
+    ]
+}
