@@ -29,28 +29,14 @@ class Monster():
         for skill_name, skill_points in current_monster["stats"].items():
             monster_stats(skill_name, skill_points)
 
+        with open("monster.json", 'r', encoding='utf-8') as f:
+            monster_list = json.load(f)
+            self.monster_name = monster_list['monsters'][self.index]['name']
+        z = random.randint(1, level)
+        monster_quan = [1, 5, 10, 25, 100, 500]
+        self.number_of_monsters = int(z / monster_quan[self.index])
 
-def summon_monsters(monster_index, level):
-    with open("monster.json", 'r', encoding='utf-8') as f:
-        monster_list = json.load(f)
-        monster_name = monster_list['monsters'][monster_index]['name']
-    z = random.randint(1, level)
-    if monster_index == 1:
-        z = z / 5
-        z = math.ceil(z)
-    elif monster_index == 2:
-        z = z / 10
-        z = math.ceil(z)
-    elif monster_index == 3:
-        z = z / 25
-        z = math.ceil(z)
-    elif monster_index == 4:
-        z = z / 100
-        z = math.ceil(z)
-    elif monster_index == 5:
-        z = z / 500
-        z = math.ceil(z)
-    number_of_monsters = z
-    return number_of_monsters, monster_name, monster_list['monsters'][monster_index]['stats']
+        self.monster_stats = monster_list['monsters'][self.index]['stats']
+
 
 
