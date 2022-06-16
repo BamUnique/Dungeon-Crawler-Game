@@ -1,6 +1,5 @@
 import json
-
-import items
+import item
 
 class Player():
 
@@ -29,7 +28,7 @@ class Player():
 
         for equip_slot, equipment_name in current_class["kit"].items():
             if equip_slot:
-                eq = items.get_item_by_name(equipment_name, items.WEAPONS)
+                eq = item.get_item_by_name(equipment_name, item.WEAPONS)
                 if eq:
                     self.inventory.append(eq)
                 else:
@@ -46,9 +45,9 @@ class Equipment():
         self.type = equipment_dict["type"]
 
         self.rarity = equipment_dict["rarity"]
-        self.rarity_name = items.ITEM_RARITY[self.rarity]
+        self.rarity_name = item.ITEM_RARITY[self.rarity]
 
-        self.rarity_prefix = items.ITEM_RARITY_COLOR[self.rarity_name]
+        self.rarity_prefix = item.ITEM_RARITY_COLOR[self.rarity_name]
 
         self.buffs = equipment_dict["buffs"]
 
