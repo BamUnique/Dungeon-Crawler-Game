@@ -1,0 +1,87 @@
+{
+  "damaging_abilities": [
+    {
+      "name": "Slash",
+      "damage": 1,
+      "damage_type": "strength",
+      "chance_of_hit": 1
+    },
+    {
+      "name": "Stab",
+      "damage": 1.5,
+      "damage_type": "strength",
+      "chance_of_hit": 0.5
+    },
+    {
+      "name": "Quick Draw",
+      "damage": 1.2,
+      "damage_type": "strength",
+      "chance_of_hit": 0.9
+    },
+    {
+      "name": "Charged Shot",
+      "damage": 2,
+      "damage_type": "strength",
+      "chance_of_hit": 0.2
+    },
+    {
+      "name": "Fireball",
+      "damage": 0.7,
+      "damage_type": "wisdom",
+      "chance_of_hit": 1
+    },
+    {
+      "name": "Lightning Bolt",
+      "damage": 3,
+      "damage_type": "wisdom",
+      "chance_of_hit": 0.15
+    },
+    {
+      "name": "Shield Bash",
+      "damage": 0.3,
+      "damage_type": "defence",
+      "chance_of_hit": 1
+    },
+    {
+      "name": "Pound",
+      "damage": 1,
+      "damage_type": "defence",
+      "chance_of_hit": 0.5
+    }
+  ],
+
+  "misc_abilities": [
+    {
+      "name": "Roll",
+      "type": "dodge"
+    },
+    {
+      "name": "Bloodlust",
+      "type": "heal"
+    },
+    {
+      "name": "Side Step",
+      "type": "dodge"
+    },
+    {
+      "name": "Nature's Blessing",
+      "type": "heal"
+    },
+    {
+      "name": "Mirgae",
+      "type": "dodge"
+    },
+    {
+      "name": "Heal",
+      "type": "heal"
+    },
+    {
+      "name": "Taunt",
+      "type": "dodge"
+    },
+    {
+      "name": "Revitalise",
+      "type": "heal"
+    }
+  ]
+}
