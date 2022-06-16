@@ -26,8 +26,7 @@ if __name__ == '__main__':
 
     m = Monster(dungeonLevel, level)
 
-    current_abilities, number_of_monsters, monster, individual_monster_stats, total_monster_hp = \
-        dungeon.dungeon_interaction(chosen_class, class_name, traveller_name,
-                                    dungeonLevel, maxLevel, level, m.index)
+    current_abilities, total_monster_hp = dungeon.dungeon_interaction(chosen_class, class_name, traveller_name,
+                                                                      dungeonLevel, maxLevel, level, m.index)
 
-    dungeon.attack_phase(current_abilities, chosen_class)
+    dungeon.attack_phase(current_abilities, chosen_class, m, p)
