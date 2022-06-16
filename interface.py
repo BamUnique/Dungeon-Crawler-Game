@@ -5,7 +5,7 @@ from player import Player
 import choice
 from colorama import init, Fore, Style
 
-import items
+import item
 
 def main_menu():
     init(autoreset=True)
