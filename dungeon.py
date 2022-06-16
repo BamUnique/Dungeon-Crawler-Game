@@ -1,10 +1,13 @@
 import monster
 import json
+import choice
+import math
+import random
 from colorama import Style, Fore
 from player import Player
 
 
-def entering_dungeon(chosen_class, class_name, traveller_name, dungeonLevel, monster_index):
+def entering_dungeon(class_name, traveller_name, dungeonLevel):
     if dungeonLevel == 0:
         dungeonLevel = 1
     level = 0
@@ -45,23 +48,35 @@ def dungeon_interaction(chosen_class, class_name, traveller_name, dungeonLevel, 
 
 
 
-def attack_phase(current_abilities):
-    print(f"Choose an ability:")
-    ability_num = 0
-    valid_ability = False
+def attack_phase(current_abilities, chosen_class):
     ability_list = []
 
-    while valid_ability == False:
-        for ability_type, ability_name in current_abilities["abilities"].items():
-            print(f'{ability_num}.', ability_name)
-            ability_num += 1
-            ability_list.append(ability_name)
-        print(ability_list[0])
+    for ability_type, ability_name in current_abilities["abilities"].items():
+        ability_list.append(ability_name)
 
-       # for item in ability_list:
-            #with open()
+    with open('ability_damage.json', 'r', encoding='utf-8') as f:
+        ability_damages = json.load(f)
 
+    chosen = choice.Menu(ability_list, title='Choose your ability').ask()
+    chosen_ability = ability_list.index(chosen)
+    type_list = ['damaging_abilities', 'misc_abilities']
+    chosen_index = math.floor(chosen_ability/2)
+    type_of_abilities = type_list[chosen_index]
+    ability_class_index = chosen_ability + (2*chosen_class)
 
-        chosen_ability = input()
-        if chosen_ability == '0' or chosen_ability == ability_list[0]:
-            pass
+    stats = ability_damages[type_of_abilities][ability_class_index]
+    name = stats['name']
+    if type_of_abilities == 'misc_abilities':
+        chosen_ability_type = stats['type']
+        print(f'You used {chosen_ability_name} to {chosen_ability_type}')
+    else:
+        chosen_ability_damage = stats['damage']
+        damage_type = stats['damage_type']
+        chance_of_hit = stats['chance_of_hit']
+        per_chance = int(chance_of_hit * 10)
+        hit_list = ['True', 'False']
+        chance = [per_chance,(100-per_chance)]
+        does_hit = random.choices(hit_list, chance)
+
+        if does_hit == 'True':
+            print(f"You used {name} doing {chosen_ability_damage} {damage_type}")
