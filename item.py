@@ -14,7 +14,7 @@ def your_item_equipped():
         all_items = json.load(f)
 
 
-global ITEMS, WEAPONS, ARMOUR, SPELLS, ITEM_RARITY, ITEM_RARITY_COLOR
+global ITEMS, WEAPONS, ARMOUR, ITEM_RARITY, ITEM_RARITY_COLOR
 
 
 with open("items.json", 'r', encoding='utf-8') as f:
@@ -22,7 +22,6 @@ with open("items.json", 'r', encoding='utf-8') as f:
 
 WEAPONS = ITEMS["weapons"]
 ARMOUR = ITEMS["armour"]
-SPELLS = ITEMS["spells"]
 
 ITEM_RARITY_COLOR = {
     "Common": Style.BRIGHT + Fore.WHITE,
