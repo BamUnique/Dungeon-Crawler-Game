@@ -12,6 +12,8 @@ class Player():
         self.inventory = []
         self.equip_slots = {}
 
+        self.player_stats = {}
+
         self.set_class(class_index)
 
     def set_class(self, class_index):
@@ -25,6 +27,7 @@ class Player():
 
         for skill_name, skill_points in current_class["skills"].items():
             set_skill(skill_name, skill_points)
+            self.player_stats.update( {skill_name : skill_points} )
 
         for equip_slot, equipment_name in current_class["kit"].items():
             if equip_slot:
