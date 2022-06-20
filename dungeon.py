@@ -24,7 +24,7 @@ def entering_dungeon(class_name, traveller_name, dungeonLevel):
     return maxLevel, level
 
 
-def dungeon_interaction(chosen_class, class_name, traveller_name, dungeonLevel, maxLevel, level, monster_index):
+def dungeon_interaction(chosen_class, traveller_name, dungeonLevel, maxLevel, level):
     print(f"Well done {traveller_name} for accepting the challenge. I wish you the best of luck.")
     print(f'You enter floor {level} of {maxLevel}')
     m = Monster(dungeonLevel, level)
@@ -66,14 +66,13 @@ def attack_phase(current_abilities, chosen_class, m, p):
     ability_class_index = chosen_ability + (2*chosen_class)
 
     stats = ability_damages[type_of_abilities][ability_class_index]
-    name = stats['name']
     if type_of_abilities == 'misc_abilities':
         chosen_ability_type = stats['type']
-        print(f'You used {name} to {chosen_ability_type}')
         if chosen_ability_type == 'dodge':
             if p.player_stats['agility'] > m.monster_stats['agility']:
-                if p.player_stats >= (2* (m.monster_stats['agility'])):
+                if p.player_stats['agility'] >= (2 * (m.monster_stats['agility'])):
                     dodge = 'Stun'
+                    does_hit = False
     else:
         chosen_ability_damage = stats['damage']
         damage_type = stats['damage_type']
@@ -83,6 +82,6 @@ def attack_phase(current_abilities, chosen_class, m, p):
         chance = [per_chance,(100-per_chance)]
         does_hit = ''.join(random.choices(hit_list, chance))
 
-        player_damage = int(chosen_ability_damage * p.player_stats[damage_type])
+    player_damage = int(chosen_ability_damage * p.player_stats[damage_type])
 
-        return player_damage, does_hit, dodge
+    return player_damage, does_hit, dodge
