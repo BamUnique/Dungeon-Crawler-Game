@@ -28,26 +28,26 @@ def dungeon_interaction(chosen_class, class_name, traveller_name, dungeonLevel, 
     print(f"Well done {traveller_name} for accepting the challenge. I wish you the best of luck.")
     print(f'You enter floor {level} of {maxLevel}')
     m = Monster(dungeonLevel, level)
-    total_monster_hp = int(m.monster_stats['hp'] * m.number_of_monsters)
     if m.number_of_monsters > 1:
         plurality = 's'
     else:
         plurality = ''
-    print(f"On floor {level} you see {m.number_of_monsters} {m.monster_name}{plurality}, they have "
+    print(f"On floor {level} you see {m.number_of_monsters} {m.monster_name}{plurality}, {m.monster_name}'s have "
           f"{m.monster_stats['hp']}HP each")
     if m.number_of_monsters > 1:
-        print(f"They have a total of {total_monster_hp}HP")
+        print(f"This group has a total of {m.total_monster_hp}HP")
 
     with open('class_abilities.json', 'r', encoding='utf-8') as f:
         all_abilities = json.load(f)
 
     current_abilities = all_abilities["classes"][chosen_class]
-    return current_abilities, total_monster_hp
+    return current_abilities
 
 
 
 
 def attack_phase(current_abilities, chosen_class, m, p):
+    dodge = ''
     ability_list = []
 
     for ability_type, ability_name in current_abilities["abilities"].items():
@@ -70,6 +70,10 @@ def attack_phase(current_abilities, chosen_class, m, p):
     if type_of_abilities == 'misc_abilities':
         chosen_ability_type = stats['type']
         print(f'You used {name} to {chosen_ability_type}')
+        if chosen_ability_type == 'dodge':
+            if p.player_stats['agility'] > m.monster_stats['agility']:
+                if p.player_stats >= (2* (m.monster_stats['agility'])):
+                    dodge = 'Stun'
     else:
         chosen_ability_damage = stats['damage']
         damage_type = stats['damage_type']
@@ -79,13 +83,6 @@ def attack_phase(current_abilities, chosen_class, m, p):
         chance = [per_chance,(100-per_chance)]
         does_hit = ''.join(random.choices(hit_list, chance))
 
-        if does_hit == 'True':
-            print(f"You used {name} doing {chosen_ability_damage} {damage_type}")
-        else:
-            print(f"You used {name}, however you missed the {m.monster_name}")
+        player_damage = int(chosen_ability_damage * p.player_stats[damage_type])
 
-        print(chosen_ability_damage)
-        print(p.player_stats[damage_type])
-        
-        if does_hit == 'True':
-            pass
+        return player_damage, does_hit, dodge
