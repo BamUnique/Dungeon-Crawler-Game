@@ -38,5 +38,5 @@ class Monster():
 
         self.monster_stats = monster_list['monsters'][self.index]['stats']
 
-
+        self.total_monster_hp = int(self.monster_stats['hp'] * self.number_of_monsters)
 
