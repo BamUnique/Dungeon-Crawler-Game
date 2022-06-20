@@ -1,10 +1,10 @@
 import json
 import item
 
+
 class Player():
 
     def __init__(self, class_index, traveller_name, dungeonLevel):
-
         self.name = traveller_name
         self.dungeonLevel = dungeonLevel
         self.player_class_index = class_index
@@ -15,6 +15,7 @@ class Player():
         self.player_stats = {}
 
         self.set_class(class_index)
+
 
     def set_class(self, class_index):
         with open('classes.json', 'r', encoding='utf-8') as f:
@@ -27,35 +28,34 @@ class Player():
 
         for skill_name, skill_points in current_class["skills"].items():
             set_skill(skill_name, skill_points)
-            self.player_stats.update( {skill_name : skill_points} )
+            self.player_stats.update({skill_name: skill_points})
 
         for equip_slot, equipment_name in current_class["kit"].items():
             if equip_slot:
-                eq = item.get_item_by_name(equipment_name, item.WEAPONS)
-                if eq:
-                    self.inventory.append(eq)
-                else:
-                    self.inventory.append(equipment_name)
+                weapon = item.get_item_by_name(equipment_name, item.WEAPONS)
+                if weapon:
+                    self.inventory.append(weapon)
+                armour = item.get_item_by_name(equipment_name, item.ARMOUR)
+                if armour:
+                    self.inventory.append(armour)
 
             self.equip_slots[equip_slot] = equipment_name
+        e = Equipment(self.inventory)
+        self.current_weapon = e.pretty_weapon
+        self.current_armour = e.pretty_armour
+
 
 
 class Equipment():
 
     def __init__(self, equipment_dict):
 
-        self.name = equipment_dict["name"]
-        self.type = equipment_dict["type"]
+        self.weapon_rarity = equipment_dict[0]["rarity"]
+        self.weapon_rarity_prefix = (item.item_rarity(self.weapon_rarity))
+        self.equipped_weapon = equipment_dict[0]['name']
+        self.pretty_weapon = self.weapon_rarity_prefix + self.equipped_weapon
 
-        self.rarity = equipment_dict["rarity"]
-        self.rarity_name = item.ITEM_RARITY[self.rarity]
-
-        self.rarity_prefix = item.ITEM_RARITY_COLOR[self.rarity_name]
-
-        self.buffs = equipment_dict["buffs"]
-
-    def __str__(self):
-
-        pretty_name = self.rarity_prefix + self.name
-
-        return pretty_name
+        self.armour_rarity = equipment_dict[1]["rarity"]
+        self.armour_rarity_prefix = (item.item_rarity(self.armour_rarity))
+        self.equipped_armour = equipment_dict[1]['name']
+        self.pretty_armour = self.armour_rarity_prefix + self.equipped_armour
