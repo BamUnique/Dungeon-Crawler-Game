@@ -14,7 +14,7 @@ def your_item_equipped():
         all_items = json.load(f)
 
 
-global ITEMS, WEAPONS, ARMOUR, ITEM_RARITY, ITEM_RARITY_COLOR
+global ITEMS, WEAPONS, ARMOUR
 
 
 with open("items.json", 'r', encoding='utf-8') as f:
@@ -23,13 +23,18 @@ with open("items.json", 'r', encoding='utf-8') as f:
 WEAPONS = ITEMS["weapons"]
 ARMOUR = ITEMS["armour"]
 
-ITEM_RARITY_COLOR = {
-    "Common": Style.BRIGHT + Fore.WHITE,
-    "Uncommon": Style.BRIGHT + Fore.GREEN,
-    "Rare": Style.BRIGHT + Fore.BLUE,
-    "Epic": Style.BRIGHT + Fore.MAGENTA,
-    "Legendary": Style.BRIGHT + Fore.LIGHTYELLOW_EX,
-    "Mythical": Style.BRIGHT + Fore.LIGHTRED_EX
-}
+def item_rarity(prefix):
+    if prefix == 0:
+        color = (Style.BRIGHT + Fore.WHITE)
+    elif prefix == 1:
+        color = (Style.BRIGHT + Fore.GREEN)
+    elif prefix == 2:
+        color = (Style.BRIGHT + Fore.BLUE)
+    elif prefix == 3:
+        color = (Style.BRIGHT + Fore.MAGENTA)
+    elif prefix == 4:
+        color = (Style.BRIGHT + Fore.LIGHTYELLOW_EX)
+    elif prefix == 5:
+        color = (Style.BRIGHT + Fore.LIGHTRED_EX)
 
-ITEM_RARITY = ITEM_RARITY_COLOR.keys()
+    return color
