@@ -45,24 +45,29 @@ def class_choice(traveller_name):
     return chosen_class, chosen
 
 
-def start_game_message(class_index, traveller_name, armour_name, weapon_name):
+def start_game_message(class_index, p):
 
     berserker_message = f"You woke up this morning with a burning fire in the pit of your stomach, finally you are " \
-                        f"able to equip your worn {armour_name} and \n" \
-                        f"sheath your {weapon_name} in its scabbard on your hip, after this you say farewell " \
+                        f"able to equip your worn {p.current_armour}" + Style.RESET_ALL + " and \n" \
+                        f"sheath your {p.current_weapon}" + Style.RESET_ALL + " in its scabbard on your hip, " \
+                                                                              "after this you say farewell " \
                         f"to your family, you enter the dungeon.."
 
-    archer_message = f"Within minutes after getting the message from the King about the dungeon that has claimed many " \
-                     f"warriors, you have already donned your {armour_name,}\n" \
-                     f" filled your quiver and made sure {weapon_name} was on your horse, then " \
+    archer_message = f"Within minutes after getting the message from the King about the dungeon that has claimed many" \
+                     f" warriors, you have already donned your {p.current_armour}" + Style.RESET_ALL + "\n" \
+                     f" filled your quiver and made sure {p.current_weapon}" + Style.RESET_ALL + " was on " \
+                                                                                                 "your horse, then " \
                      f"you make haste towards the dungeon.."
 
     mage_message = f"Your brain raced as you went to pack for the journey, finally " \
-                   f"it was time to put the years of studying the arcance to use. You polish your {weapon_name} \n" \
-                   f"and slip it into {armour_name}, then on your magic broom, start the long trip to the dungeon.."
+                   f"it was time to put the years of studying the arcance to use. \n" \
+                   f"You polish your {p.current_weapon}" + Style.RESET_ALL + f" and slip " \
+                                                     f"it into {p.current_armour}, "  + Style.RESET_ALL +\
+                   f"then on your magic broom, start the long trip to the dungeon.."
 
-    tank_message = f"When faced with the challenge of the dungeon you have your strong {armour_name} equipped " \
-                   f"alongside your trusty {weapon_name}, slowly you made your way \n" \
+    tank_message = f"When faced with the challenge of the dungeon you have your strong {p.current_armour} "\
+                   + Style.RESET_ALL + " equipped " \
+                   f"alongside your trusty {p.current_weapon}," + Style.RESET_ALL + " slowly you made your way \n" \
                    f"into the dungeon.."
 
     messages = [berserker_message, archer_message, mage_message, tank_message]
@@ -84,4 +89,6 @@ def in_game_interface():
         elif option == '2':
             x = True
         elif option == '3':
-            x = True
+            print(Style.BRIGHT + Fore.RED + 'Warning!' + Style.RESET_ALL + "Quitting is the same as dying"
+                                                                           "You will lose all current progress")
+            print("Type" + Style.BRIGHT + Fore.GREEN + "YES")
