@@ -1,3 +1,4 @@
+import damage
 import dungeon
 import interface
 from player import Player
@@ -19,14 +20,28 @@ if __name__ == '__main__':
 
     weapon = (p.inventory[0])["name"]
     armour = (p.inventory[1])
+    cooldown = 0
 
     interface.start_game_message(chosen_class, traveller_name, armour, weapon)
+    while game_run == True:
 
-    maxLevel, level = dungeon.entering_dungeon(chosen_class, traveller_name, dungeonLevel)
 
-    m = Monster(dungeonLevel, level)
 
-    current_abilities, total_monster_hp = dungeon.dungeon_interaction(chosen_class, class_name, traveller_name,
-                                                                      dungeonLevel, maxLevel, level, m.index)
+        maxLevel, level = dungeon.entering_dungeon(chosen_class, traveller_name, dungeonLevel)
 
-    dungeon.attack_phase(current_abilities, chosen_class, m, p)
+        while level <= maxLevel:
+
+            m = Monster(dungeonLevel, level)
+
+            current_abilities = dungeon.dungeon_interaction(chosen_class, class_name, traveller_name,
+                                                                              dungeonLevel, maxLevel, level, m.index)
+
+            attack_first = damage.who_fights_first(m, p)
+
+            player_damage, does_hit, dodge = dungeon.attack_phase(current_abilities, chosen_class, m, p)
+
+            if attack_first == 'monster':
+                damage.monster_fight(player_damage, does_hit, dodge, cooldown)
+            elif attack_first == 'player':
+                damage.player_fight()
+
